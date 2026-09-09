@@ -184,6 +184,21 @@ root_dashboard:
   - Describe Employment Operations as candidate-owned, local-first preparation and
     review; never imply automated outreach, submission or public-profile mutation.
   - Keep Fieldcraft available as a distinct, working-method library.
+  detail_pages:
+  - hearth-code.html
+  - work-studio.html
+  - methodology.html
+  - prompt-catalog.html
+  - knowledge-evidence.html
+  - engineering-exocore.html
+  - employment-operations.html
+  detail_page_requirements:
+  - Provide a substantive public-safe explanation, a distinct visual information
+    device, source-aware labels and an explicit claim limit.
+  - Use synthesized examples when the underlying record, catalog, runtime or
+    operational detail is private, unverified or review-only.
+  - Do not imply a product launch, active service, automatic effect or human
+    verification from an orientation page.
 corpus:
   required_total: 32
   new_articles: 31

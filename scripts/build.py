@@ -26,6 +26,7 @@ for a in articles:
 shutil.copy2(root/'publication.json',out/'publication.json')
 if (root/'fieldcraft-contract.yaml').exists():shutil.copy2(root/'fieldcraft-contract.yaml',out/'fieldcraft-contract.yaml')
 header=(root/'web/header.html').read_text();legacy_demo=(root/'web/demo.html').read_text()
+detail_pages=json.loads((root/'web/detail-pages.json').read_text())
 def e(value):return html.escape(str(value),quote=True)
 def demo(a):
  if a['id']=='FC-001':return legacy_demo
@@ -63,6 +64,12 @@ rows=''.join(f'<a class="collection-row" href="{a["slug"]}.html" data-category="
 index=(root/'web/index.html').read_text().replace('<!--COLLECTION-->','<div class="collection">'+rows+'</div>').replace('<!--CORPUS_SUMMARY-->',f'{len(articles)} practical field notes. Each with a formulation, a working example, and a counterexample.').replace('</head>','<link rel="alternate" type="application/rss+xml" title="Fieldcraft" href="feed.xml"></head>').replace('Back to top ↑','Back to top ↑')
 (out/'fieldcraft.html').write_text(index)
 (out/'index.html').write_text((root/'web/root.html').read_text())
+detail_nav=''.join(f'<a href="{e(page["slug"])}.html">{e(page["number"])} · {e(page["title"])}</a>' for page in detail_pages)
+for page in detail_pages:
+ sections=''.join('<section><h2>'+e(section['title'])+'</h2>'+''.join('<p>'+e(paragraph)+'</p>' for paragraph in section['body'].split('\n\n'))+'</section>' for section in page['sections'])
+ visual=f'<figure class="detail-visual visual-{e(page["visual"])}" aria-hidden="true"><div class="visual-node node-a"></div><div class="visual-node node-b"></div><div class="visual-node node-c"></div><div class="visual-node node-d"></div><div class="visual-line line-a"></div><div class="visual-line line-b"></div><div class="visual-line line-c"></div><figcaption>{e(page["kicker"])}</figcaption></figure>'
+ page_html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(page['deck'])}"><title>{e(page['title'])} · Hearth &amp; Code</title><link rel="stylesheet" href="style.css"></head><body class="detail-page"><a class="skip" href="#main">Skip to content</a>{header}<main id="main"><section class="detail-hero"><div><p class="eyebrow">{e(page['number'])} / {e(page['kicker'])}</p><h1>{e(page['title'])}</h1><p class="detail-deck">{e(page['deck'])}</p><p class="detail-summary">{e(page['summary'])}</p></div>{visual}</section><div class="detail-layout"><aside class="detail-aside"><a href="./">← Orientation</a><p class="eyebrow">EXPLORE THE LAYER</p>{detail_nav}<a class="fieldcraft-link" href="fieldcraft.html">Fieldcraft library ↗</a></aside><article class="detail-article">{sections}<section class="detail-limit"><p class="eyebrow">KEEP THE CLAIM BOUNDED</p><p>{e(page['limit'])}</p></section></article></div></main><footer><span>HEARTH &amp; CODE · PUBLIC ORIENTATION</span><span>SOURCE-AWARE / BOUNDED</span><a href="./">Back to orientation ↑</a></footer></body></html>'''
+ (out/f'{page["slug"]}.html').write_text(page_html)
 rss=ET.Element('rss',version='2.0');channel=ET.SubElement(rss,'channel')
 for key,value in [('title','Hearth & Code · Fieldcraft'),('link','https://hearthandcode.github.io/fieldcraft/'),('description','Practical techniques with working examples.')]:ET.SubElement(channel,key).text=value
 for a in ordered:
