@@ -55,4 +55,3 @@ A pass establishes list preservation for the supplied synthetic strings. It does
 ## Source and formulation note
 
 This is an original handoff predicate informed by the public risk-management idea that roles, context and constraints should remain reviewable. NIST’s AI Risk Management Framework is a contextual public source, not a source for this exact list comparison. All examples are synthetic, and the module performs no routing or external action.
-

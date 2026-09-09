@@ -62,4 +62,3 @@ A pass establishes only the declared tag arithmetic, count and identity checks. 
 ## Source and formulation note
 
 The set predicate and tag union are original pedagogical constructions. NIST’s public framework is a contextual source for explicit criteria and risk-aware review, not a source for this creative taxonomy. All concepts and tags are synthetic. No model-quality, audience-response or social claim follows from a passing fixture.
-

@@ -17,7 +17,7 @@ for entry in manifest['articles']:
  if meta['id']!=entry['id'] or meta['slug']!=entry['slug']:raise ValueError('Identity mismatch')
  if meta['verified'] is not False:raise ValueError('Export does not confer a verification seal')
  if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',meta['slug']):raise ValueError('Invalid slug')
- body=body.lstrip()
+ body=body.strip()+'\n'
  if any(s in body for s in ['/home/','discord.com/channels/','-----BEGIN PRIVATE KEY','ghp_','sk-proj-']):raise ValueError('Private content pattern requires review')
  (root/'content'/f"{meta['slug']}.md").write_text(body)
  for key in required:

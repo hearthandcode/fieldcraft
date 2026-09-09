@@ -53,4 +53,3 @@ A pass establishes only integer validity, a ceiling comparison and record-count 
 ## Source and formulation note
 
 The notation and module are original teaching constructions about bounded work. NIST’s public AI Risk Management Framework is a contextual reference for managing risk and documenting decisions; it does not prescribe this specific budget predicate. Fixtures are synthetic. The module is synchronous, pure and browser-safe, and its pass result is evidence about the trace fields only.
-

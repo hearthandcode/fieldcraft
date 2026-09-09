@@ -104,7 +104,7 @@
         "https://www.nist.gov/itl/ai-risk-management-framework"
       ],
       "master_sha256": "ecaa4a58c2bae88dc3060dc3c784b5208b1cac9d49dbd0d06995d01b2ff1e667",
-      "export_sha256": "0d6390683fba0b7f7ebcf19e30e927573858a82dc59eeec49f8fa204cbef154d"
+      "export_sha256": "b86dc149eb246918a9fb7078223008bd2c07cbbd71f0f4df57fb0de68ebb8e10"
     },
     {
       "id": "FC-006",
@@ -125,7 +125,7 @@
         "https://www.nist.gov/itl/ai-risk-management-framework"
       ],
       "master_sha256": "30efc5ec4f45e94d65193a877dad3b3e225b93363e432ec1341a9eacf7a94d36",
-      "export_sha256": "d31621ae6a93ea40f52e75d24d541db94bdad4236c73078cf3c87fbdb72da37b"
+      "export_sha256": "3f7304778929533c48bd95a5598bf900f7a8618f139472e74c852b376e6b92d3"
     },
     {
       "id": "FC-007",
@@ -146,7 +146,7 @@
         "https://www.w3.org/TR/WCAG22/"
       ],
       "master_sha256": "76fc569acc03e14926e0d78d6d80239ca1f4da04d1df1555f2e5bb76f6b3f73d",
-      "export_sha256": "39ff68936636ff48a87dac21761d3f51811480a68e39b58f88deffe2dfd56a69"
+      "export_sha256": "4bf77ea0bbc53b8cb96441fa5df9bba297caf2b55780181bb72e7b93f0ebb2b2"
     },
     {
       "id": "FC-008",
@@ -209,7 +209,7 @@
         "https://www.nist.gov/itl/ai-risk-management-framework"
       ],
       "master_sha256": "7914994b88615185e3fe8554e946755e6eb2261525c8893e053f2f782253d1d1",
-      "export_sha256": "ab0832ce99366a26bf9994a858d1f8aad81baa39b145fdd8789e3de7d42f0fbd"
+      "export_sha256": "90eb5d9d5e17bb3527c0a379ab795dae387a8bc49e50faf0ded9d7a6deb3ad3b"
     },
     {
       "id": "FC-011",

@@ -59,4 +59,3 @@ Passing establishes valid numeric inputs and threshold attainment under this wei
 ## Source and formulation note
 
 The weighted score and notation are original pedagogical constructions. WCAG 2.2 is included as a public example of a domain where explicit criteria matter, but this article’s creative score is not a WCAG conformance test. The candidate, criteria and fixtures are synthetic. The module reports arithmetic only and makes no claim to measure creative quality or model performance.
-
