@@ -1,0 +1,15 @@
+{
+  "articles": [
+    {
+      "id": "FC-001",
+      "source_filename": "0001-make-the-acceptance-condition-executable.md",
+      "slug": "acceptance-condition",
+      "title": "Make the acceptance condition executable",
+      "date": "2026-09-09",
+      "subject": "ESS & agentic engineering",
+      "status": "design-preview",
+      "master_sha256": "c0fad4ab830004a704d85c1188fce2af4297485883c7329ce4d15b3436afe61e",
+      "export_sha256": "1b263f542e36f5a35d57da54033418e3aedd3329d630f2dd1a9299b3aa633f78"
+    }
+  ]
+}
