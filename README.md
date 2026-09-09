@@ -2,7 +2,9 @@
 
 Practical techniques for thinking, building and creating with AI. One technique, a working example, and a visible result.
 
-Fieldcraft: https://hearthandcode.github.io/fieldcraft/
+Orientation dashboard: https://hearthandcode.github.io/fieldcraft/
+
+Fieldcraft library: https://hearthandcode.github.io/fieldcraft/fieldcraft.html
 
 ## Run locally
 
@@ -27,7 +29,7 @@ Open http://localhost:4173. The first article includes an interactive capacity/u
 
 Article masters live in the private Hearth & Code Knowledge Hub. `content/` contains explicitly selected public projections, not the full source corpus. `publication.json` records source and exported digests. Edit the master and run `python scripts/export_corpus.py /explicit/path/to/masters`, then rebuild. New articles need an explicit allowlist entry and publication review. The build rejects drift from the exported digest.
 
-The first article established the adopted visual and editorial direction; the 32-article seed edition extends it. A publication is not a verification seal. Its mathematical expression is a pedagogical model, not normative ESS notation. Each indexed entry has an article, runnable example and interactive demonstration.
+The first article established the adopted visual and editorial direction; the 32-article seed edition extends it. A publication is not a verification seal. Its mathematical expression is a pedagogical model, not normative ESS notation. Each indexed entry has an article, runnable example and interactive demonstration. The root page is a public Hearth & Code orientation dashboard; it keeps candidate, review-only and source-only material visibly bounded while linking to Fieldcraft as its practical library.
 
 ## Presentation
 

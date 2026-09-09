@@ -160,6 +160,30 @@ presentation:
   - Reduced motion; no trackers, remote fonts or decorative telemetry
   - Render the first formulation paragraph in a restrained bordered panel; preserve
     FC-001 native equation panel.
+root_dashboard:
+  status: adopted-direction
+  purpose: Public orientation surface for Hearth & Code; links to work without
+    promoting candidate artifacts into verified products.
+  route: index.html
+  fieldcraft_route: fieldcraft.html
+  visual_posture: Ember Circuit tokens, editorial typography, source-aware labels,
+    visible boundaries and no fabricated telemetry.
+  sections:
+  - Hearth & Code
+  - Fieldcraft
+  - Work and studio
+  - Methodology
+  - Prompt engineering catalog
+  - Knowledge and evidence
+  - Engineering and Exocore
+  - Employment Operations
+  publication_rules:
+  - Use public-safe descriptions only; no private paths, personal records, job data,
+    Discord identities, secrets or bulk catalog exports.
+  - Label source-only, candidate and review-only work as such.
+  - Describe Employment Operations as candidate-owned, local-first preparation and
+    review; never imply automated outreach, submission or public-profile mutation.
+  - Keep Fieldcraft available as a distinct, working-method library.
 corpus:
   required_total: 32
   new_articles: 31
