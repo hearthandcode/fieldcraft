@@ -26,7 +26,11 @@ jobs:
           node-version: '22'
       - run: pip install -r requirements.txt
       - run: node examples/check.test.mjs
+      - run: node scripts/test_corpus.mjs
       - run: python scripts/build.py
+      - run: python scripts/validate_corpus.py
+      - run: python scripts/test_article_commands.py
+      - run: python scripts/test_rust.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

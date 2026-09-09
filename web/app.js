@@ -28,3 +28,17 @@ if($('#search')){
  $('#search').oninput=update;
  document.querySelectorAll('[data-filter]').forEach(button=>button.onclick=()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});update();});
 }
+if ($('#demo-input')) {
+ const config=JSON.parse($('#demo-config').textContent);
+ const showError=error=>{$('#demo-verdict').textContent='INVALID INPUT';$('#demo-summary').textContent=error.message;$('#demo-result').textContent='';};
+ try {
+  if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(config.slug))throw new Error('Invalid example identity');
+  const {evaluate}=await import(`./examples/${config.slug}.mjs`);
+  const run=()=>{try{const input=JSON.parse($('#demo-input').value),result=evaluate(input);if(typeof result.pass!=='boolean')throw new Error('Example returned an invalid result');$('#demo-verdict').textContent=result.pass?'PASS / Declared check satisfied':'FAIL / Declared check not satisfied';$('#demo-verdict').className=result.pass?'cyan':'gold';$('#demo-summary').textContent=result.summary;$('#demo-result').textContent=JSON.stringify(result.checks,null,2);}catch(error){showError(error);}};
+  $('#demo-run').onclick=run;
+  $('#demo-fail').onclick=()=>{$('#demo-input').value=JSON.stringify(config.counterexample,null,2);run();};
+  $('#demo-reset').onclick=()=>{$('#demo-input').value=JSON.stringify(config.initial,null,2);run();};
+  $('#demo-input').oninput=()=>{$('#demo-verdict').textContent='Changed / Run to check';$('#demo-summary').textContent='The input changed; the previous result is stale.';$('#demo-result').textContent='';};
+  run();
+ }catch(error){showError(error);}
+}
